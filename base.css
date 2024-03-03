@@ -1,0 +1,396 @@
+:root {
+    /* COLOR PALETTE */
+    --violet1: #a07ce8;
+    --violet2: #5840ba;
+
+    --blue1: #ebfdff;
+    --blue2: #c3e1f9;
+    --blue3: #a7f5ff;
+    --blue4: #00bdd9;
+    --blue5: #369ae6;
+    --blue6: #197dc9;
+    --blue7: #4167de;
+
+    --orange1: #f8d8bf;
+    --orange2: #f0b034;
+    --orange3: #ed7c2c;
+
+    --green: #1dd75a;
+
+    --red: #de3b40;
+
+    --shade-vl: #f8f9fb29;
+    --shade-l: #f8f9fb;
+    --shade-m: #eeeeee;
+    --shade-d: #bdc1ca;
+    /* --shade-vd:  */
+
+    --glass-bg: #1c0c130d;
+    --glass-border: #ffffff1a;
+
+    /* --fs-h1: 5rem;
+    --fs-h2: 4rem;
+    --fs-h3: 3rem;
+    --fs-p: 1rem; */
+}
+
+* {
+    font-family: 'Calibri', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    /* transition: all .4s ease-out; */
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    /* cursor: none; */
+    user-select: text;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--shade-l);
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: 20vw 1fr;
+    grid-template-rows: 8vh 1fr;
+}
+
+.test {
+    border: 3px solid gray;
+}
+
+header {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1.5px solid var(--shade-m);
+    padding-top: 1vh;
+}
+
+#school-name {
+    font-size: 25px;
+    font-weight: bold;
+    /* border: 2px solid red; */
+    /* margin-bottom: 1.5vh; */
+    transform: translateX(10%);
+}
+
+#session {
+    font-size: 17px;
+    color: gray;
+    /* margin-bottom: 2vh; */
+    transform: translateX(50%);
+}
+
+#super-search {
+    /* border: 2px solid red; */
+    background-color: var(--shade-m);
+    width: 20vw;
+    padding: 1.3vh;
+    /* margin-bottom: 1vh; */
+    transform: translateX(10%);
+    border-radius: 4px;
+}
+
+#super-search::placeholder {
+    color: var(--shade-d);
+    font-size: 16px;
+}
+
+#profile-pic {
+    height: 5vh;
+    width: 5vh;
+    transform: translateX(-150%);
+    border-radius: 50%;
+    border: 1px solid var(--shade-d);
+}
+
+
+
+
+
+
+
+aside {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-color: var(--violet2);
+    /* border: 2px solid green; */
+}
+
+#app-heading {
+    height: 12vh;
+    width: 100%;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 2vh 0 0 5vh;
+    /* border: 2px solid red; */
+}
+
+.aside-child {
+    height: 6.5vh;
+    width: calc(100% - 6vh);
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-left: 3vh;
+    padding-left: 8vh;
+    /* border: 1px solid red; */
+    /* border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px; */
+    border-radius: 6px;
+}
+
+.aside-child:hover {
+    cursor: pointer;
+    background-color: var(--shade-vl);
+}
+
+.aside-child-active {
+    background-color: var(--blue1) !important;
+    color: var(--blue4);
+    font-weight: bold;
+}
+
+
+
+
+main {
+    grid-column: 2/6;
+    grid-row: 2/3;
+    background-color: white;
+    margin: 2vh;
+    border: 1.5px solid var(--shade-m);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+section {
+    min-height: 100%;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 6vh repeat(3, 1fr);
+    display: none;
+}
+
+.section-header {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    background-color: var(--violet1);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+
+.section-heading {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+}
+
+.section-close-icon {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#dashboard-time-frame {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 15vw;
+    transform: translateY(-50%);
+    padding: .5vh;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    color: gray;
+}
+
+#dashboard-section {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 6vh 18vh 32vh 1fr;
+}
+
+#dashboard-top-4-cards {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    display: flex;
+    gap: 3vw;
+    margin: 3vh 5vh;
+    border: 1px solid red;
+}
+
+#dashboard-top-4-cards div {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid green; */
+    border-radius: 4px;
+}
+
+#cash-balance {
+    background-color: var(--blue6);
+}
+
+#bank-balance {
+    background-color: var(--blue2);
+}
+
+#total-expenses {
+    background-color: var(--orange3);
+}
+
+#salary-payable {
+    background-color: var(--orange1);
+}
+
+#dashboard-center-2-cards {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: flex;
+    gap: 2vw;
+    margin: 0 4vh 2vh 5vh;
+    border: 1px solid red;
+}
+
+#dashboard-center-2-cards div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--shade-d);
+    border-radius: 4px;
+}
+
+#dashboard-right-1-card {
+    grid-column: 4/5;
+    grid-row: 3/5;
+    margin: 0 5vh 5vh 2vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+.class-wise-fee-dues {
+    width: 100%;
+    height: calc(100% / 12);
+    border: 1px solid var(--shade-m);
+    font-size: 16px;
+    color: var(--blue6);
+    display: grid;
+    place-items: center;
+}
+
+#class-wise-fee-dues-heading {
+    font-weight: bold;
+    background-color: var(--shade-l);
+    color: gray;
+}
+
+#class-wise-fee-dues-total {
+    font-weight: bold;
+    background-color: var(--shade-d);
+    color: black;
+}
+
+#dashboard-class-wise-attendance {
+    grid-column: 1/4;
+    grid-row: 4/5;
+    margin: 0 4vh 1vh 5vh;
+    border: 1px solid red;
+}
+
+#dashboard-class-wise-attendance>p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+#student-section {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 6vh 10vh 25vh 1fr;
+}
+
+#students-top-6-cards-heading {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 5vh;
+    /* border: 2px solid red; */
+}
+
+#students-top-6-cards {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid yellow; */
+    gap: 4vh 8vh;
+    /* margin: ; */
+    padding: 0 5vh 0 5vh;
+}
+
+.students-top-6-cards-child {
+    min-width: calc((100% - 16vh) / 3);
+    background-color: var(--blue3);
+    color: var(--violet2);
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    /* border: 2px solid green; */
+    /* padding: 0 0 0 5vh; */
+}
+
+#students-right-1-card {
+    grid-column: 4/5;
+    grid-row: 2/6;
+    background-color: var(--shade-l);
+}
+
+#students-right-1-card>div {
+    height: 30%;
+    background-color: white;
+    border: 1px solid var(--shade-m);
+    margin: 2vh;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#students-right-1-card p {
+    height: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    padding-left: 3vh;
+    font-size: 16px;
+    color: var(--blue6);
+    border: 1px solid var(--shade-m);
+}
+
+#students-right-1-card-heading {
+    font-weight: bold;
+    background-color: var(--shade-l);
+    color: gray !important;
+}

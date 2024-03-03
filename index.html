@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gro ERP</title>
+    <link rel="stylesheet" href="base.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <p id="school-name">ABS Public School</p>
+        <p id="session">Session 2023-24</p>
+        <input type="text" name="search" id="super-search" placeholder="Search...">
+        <div id="profile-pic"></div>
+    </header>
+
+    <aside>
+        <p id="app-heading">Gro ERP</p>
+        <p class="aside-child">Dashboard</p>
+        <p class="aside-child">Student</p>
+        <p class="aside-child">Finance</p>
+        <p class="aside-child">Inventory</p>
+        <p class="aside-child">Transport</p>
+        <p class="aside-child">Hostel</p>
+        <p class="aside-child">Library</p>
+        <p class="aside-child">Examination</p>
+        <p class="aside-child">Employee</p>
+        <p class="aside-child">Front Desk</p>
+        <p class="aside-child">Academic</p>
+        <p class="aside-child">Users and Roles</p>
+        <p class="aside-child">Settings</p>
+    </aside>
+
+    <main>
+        <section id="dashboard-section">
+            <div class="section-header">
+                <p class="section-heading">Dashboard</p>
+                <select name="dropdown" id="dashboard-time-frame">
+                    <option value="today">Today's</option>
+                    <option value="lastmonth">Last Week's</option>
+                    <option value="lastmonth">Last Month's</option>
+                    <option value="lastyear">Last Years's</option>
+                </select>
+                <p class="section-close-icon">✕</p>
+            </div>
+            <div id="dashboard-top-4-cards">
+                <div id="cash-balance"></div>
+                <div id="bank-balance"></div>
+                <div id="total-expenses"></div>
+                <div id="salary-payable"></div>
+            </div>
+            <div id="dashboard-center-2-cards">
+                <div></div>
+                <div></div>
+            </div>
+            <div id="dashboard-right-1-card">
+                <p class="class-wise-fee-dues" id="class-wise-fee-dues-heading">Class Wise Fee Dues</p>
+                <p class="class-wise-fee-dues">Class - 1()</p>
+                <p class="class-wise-fee-dues">Class - 2()</p>
+                <p class="class-wise-fee-dues">Class - 3()</p>
+                <p class="class-wise-fee-dues">Class - 4()</p>
+                <p class="class-wise-fee-dues">Class - 5()</p>
+                <p class="class-wise-fee-dues">Class - 6()</p>
+                <p class="class-wise-fee-dues">Class - 7()</p>
+                <p class="class-wise-fee-dues">Class - 8()</p>
+                <p class="class-wise-fee-dues">Class - 9()</p>
+                <p class="class-wise-fee-dues">Class - 10()</p>
+                <p class="class-wise-fee-dues" id="class-wise-fee-dues-total">Total:</p>
+            </div>
+            <div id="dashboard-class-wise-attendance">
+                <p>Class Wise Attendance</p>
+                <div id="attendance-table">
+                </div>
+            </div>
+        </section>
+
+        <section id="student-section">
+            <div class="section-header">
+                <p class="section-heading">Student Management</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+            <p id="students-top-6-cards-heading">Activity</p>
+            <div id="students-top-6-cards">
+                <p class="students-top-6-cards-child">Admission</p>
+                <p class="students-top-6-cards-child">Attendance</p>
+                <p class="students-top-6-cards-child">Leave</p>
+                <p class="students-top-6-cards-child">Generate I-Card</p>
+                <p class="students-top-6-cards-child">Update Student</p>
+                <p class="students-top-6-cards-child">Promote Student</p>
+            </div>
+            <div id="students-right-1-card">
+                <div>
+                    <p id="students-right-1-card-heading">Student Reports</p>
+                    <p>Student List</p>
+                    <p>Attendance</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="finance-section">
+            <div class="section-header">
+                <p class="section-heading">Finance</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <p class="section-heading">Inventory</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <p class="section-heading">Transport</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <p class="section-heading">Hostel</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <p class="section-heading">Library</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <p class="section-heading">Examination</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <p class="section-heading">Employee</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <p class="section-heading">Front Desk</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <p class="section-heading">Academic</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <p class="section-heading">Users and Roles</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <p class="section-heading">Settings</p>
+                <p class="section-close-icon">✕</p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
