@@ -1,5 +1,5 @@
 let asideChildren = Array.from(document.querySelectorAll(".aside-child"));
-let mainSections =Array.from(document.querySelectorAll("main section"));
+let mainSections = Array.from(document.querySelectorAll(".section"));
 
 mainSections[1].style.display = "grid";
 asideChildren[1].classList.add("aside-child-active");
@@ -20,12 +20,20 @@ asideChildren.forEach((asideChild, index) => {
 
 
 let studentsTop6CardsChildren = Array.from(document.querySelectorAll(".students-top-6-cards-child"));
+let subSection = Array.from(document.querySelectorAll(".sub-section"));
+let subSectionCloseIcon = Array.from(document.querySelectorAll(".sub-section-close-icon"));
 
-studentsTop6CardsChildren.forEach((studentsTop6CardsChild) => {
+studentsTop6CardsChildren.forEach((studentsTop6CardsChild, index) => {
     studentsTop6CardsChild.addEventListener("click", () => {
-        studentsTop6CardsChildren.forEach((studentsTop6CardsChild) => {
-            studentsTop6CardsChild.classList.remove("students-top-6-cards-child-active");
+        subSection.forEach((child) => {
+            child.style.display = "none";
         });
-        studentsTop6CardsChild.classList.add("students-top-6-cards-child-active");
+        subSection[index].style.display = "grid";
+        subSectionCloseIcon[index].addEventListener("click", () => {
+            subSection[index].style.display = "none";
+        });
     });
 });
+
+
+
